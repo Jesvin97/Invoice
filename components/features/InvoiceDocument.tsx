@@ -134,7 +134,7 @@ export default function InvoiceDocument({ invoice: initialInvoice }: InvoiceDocu
       <style dangerouslySetInnerHTML={{ __html: `
         @page {
           size: A4;
-          margin: 12mm;
+          margin: 0;
         }
 
         .invoice-screen-shell {
@@ -193,7 +193,15 @@ export default function InvoiceDocument({ invoice: initialInvoice }: InvoiceDocu
           body { margin: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
           .print-hidden { display: none !important; }
           .invoice-screen-shell { padding: 0 !important; margin: 0 !important; max-width: none !important; }
-          .invoice-sheet { width: 100% !important; min-height: auto !important; border: none !important; border-radius: 0 !important; box-shadow: none !important; }
+          .invoice-sheet { 
+            width: 100% !important; 
+            min-height: 100vh !important; 
+            border: none !important; 
+            border-radius: 0 !important; 
+            box-shadow: none !important; 
+            padding: 12mm !important;
+            padding-bottom: 0 !important;
+          }
           .invoice-sheet * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
           
           /* Hide inputs and textareas UI during print */
@@ -233,10 +241,10 @@ export default function InvoiceDocument({ invoice: initialInvoice }: InvoiceDocu
           </div>
         </div>
 
-        <article className="invoice-sheet">
-          <div className="h-5 rounded-t-[20px] bg-[#5B2333]" />
+        <article className="invoice-sheet flex flex-col">
+          <div className="h-5 rounded-t-[20px] bg-[#5B2333] shrink-0 print:rounded-none" />
 
-          <div className="space-y-8 p-6 sm:p-8">
+          <div className="space-y-8 p-6 sm:p-8 flex-1">
             <header className="invoice-section avoid-break flex flex-col sm:flex-row justify-between gap-6 border-b border-[#231F201A] pb-8">
               <div className="flex gap-4">
                 <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl overflow-hidden border border-[#231F201A] bg-[#5B23330D]">
@@ -467,7 +475,7 @@ export default function InvoiceDocument({ invoice: initialInvoice }: InvoiceDocu
             </section>
           </div>
 
-          <footer className="invoice-section mt-8 bg-[#5B2333] px-6 py-4 text-center text-sm font-medium text-white">
+          <footer className="invoice-section mt-auto bg-[#5B2333] px-6 py-4 text-center text-sm font-medium text-white shrink-0">
             Thank you for doing business with us
           </footer>
         </article>
