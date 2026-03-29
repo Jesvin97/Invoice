@@ -1,0 +1,95 @@
+﻿
+> invoice_billing@1.0.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+node.exe : 
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (:St  
+  ring) [], RemoteExcept   
+ ion
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+> Build error occurred
+Error: Turbopack build 
+failed with 1 errors:
+./app/globals.css
+Error evaluating Node.js 
+code
+Error: It looks like 
+you're trying to use 
+`tailwindcss` directly as 
+a PostCSS plugin. The 
+PostCSS plugin has moved 
+to a separate package, so 
+to continue using Tailwind 
+CSS with PostCSS you'll 
+need to install 
+`@tailwindcss/postcss` and 
+update your PostCSS 
+configuration.
+    [at at (D:\Invoice_bill
+ing\node_modules\tailwindcs
+s\dist\lib.js:38:1643)]
+    at pluginFactory (turbo
+pack:///[turbopack-node]/tr
+ansforms/postcss.ts:56:14) 
+[D:\Invoice_billing\.next\b
+uild\chunks\[root-of-the-se
+rver]__0d-m0h0._.js:139:20]
+    [at <anonymous>]
+    at map (turbopack:///[t
+urbopack-node]/transforms/p
+ostcss.ts:43:33) [D:\Invoic
+e_billing\.next\build\chunk
+s\[root-of-the-server]__0d-
+m0h0._.js:129:35]
+    at init (turbopack:///[
+turbopack-node]/child_proce
+ss/evaluate.ts:74:20) [D:\I
+nvoice_billing\.next\build\
+chunks\[root-of-the-server]
+__0ubbtyl._.js:429:26]
+    [at process.processTick
+sAndRejections (node:intern
+al/process/task_queues:104:
+5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css 
+[Client Component Browser]
+    ./app/layout.tsx 
+[Server Component]
+
+
+    at pluginFactory (turbo
+pack:///[turbopack-node]/tr
+ansforms/postcss.ts:56:14) 
+[D:\Invoice_billing\.next\b
+uild\chunks\[root-of-the-se
+rver]__0d-m0h0._.js:139:20]
+)
+    at map (turbopack:///[t
+urbopack-node]/transforms/p
+ostcss.ts:43:33) [D:\Invoic
+e_billing\.next\build\chunk
+s\[root-of-the-server]__0d-
+m0h0._.js:129:35])
+    at init (turbopack:///[
+turbopack-node]/child_proce
+ss/evaluate.ts:74:20) [D:\I
+nvoice_billing\.next\build\
+chunks\[root-of-the-server]
+__0ubbtyl._.js:429:26])
