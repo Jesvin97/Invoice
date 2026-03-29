@@ -195,7 +195,8 @@ export default function InvoiceDocument({ invoice: initialInvoice }: InvoiceDocu
           .invoice-screen-shell { padding: 0 !important; margin: 0 !important; max-width: none !important; }
           .invoice-sheet { 
             width: 100% !important; 
-            min-height: 100vh !important; 
+            min-height: 297mm !important;
+            height: 297mm !important;
             border: none !important; 
             border-radius: 0 !important; 
             box-shadow: none !important; 
@@ -247,7 +248,7 @@ export default function InvoiceDocument({ invoice: initialInvoice }: InvoiceDocu
           <div className="space-y-8 p-6 sm:p-8 flex-1">
             <header className="invoice-section avoid-break flex flex-col sm:flex-row justify-between gap-6 border-b border-[#231F201A] pb-8">
               <div className="flex gap-4">
-                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl overflow-hidden border border-[#231F201A] bg-[#5B23330D]">
+                <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-2xl overflow-hidden border border-[#231F201A] bg-[#5B23330D]">
                   <img src="/logo.jpeg" alt="Raphael Media and Events Logo" className="h-full w-full object-cover" />
                 </div>
 
